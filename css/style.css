@@ -1,0 +1,115 @@
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+*{
+    font-family: "Golos Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    background: #11010E;
+    background: linear-gradient(320deg, rgba(17, 1, 14, 1) 0%, rgba(131, 0, 80, 1) 100%, rgba(131, 0, 80, 1) 100%);
+}
+
+header, main, footer {
+    width: 100%;
+    max-width: 360px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+header{
+    display: flex; /* Добавлено */
+    justify-content: space-between;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px; /* Добавлено для отступов */
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    display: flex; /* Добавлено */
+    justify-content: center;
+}
+
+.phon{
+    position: absolute ;
+}
+
+.star{
+    bottom: 140px;
+    right: -190px;
+}
+
+.textPhon{
+    left: 10px;
+    bottom: 120px;
+}
+
+/* Контейнер для каждого сообщения */
+.message {
+    display: flex;            /* Важно! */
+    flex-direction: column;   /* Важно! */
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+/* Общие стили для текста сообщения */
+.soo {
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;          /* Ограничиваем ширину сообщения */
+}
+
+/* Выравнивание и стили для сообщений "she" */
+.me {
+    background-color: #ec2265;
+    align-self: flex-start;   /* Выравниваем "she" влево */
+    color: #fff;
+}
+
+/* Выравнивание и стили для сообщений "me" */
+.she {
+    background-color: #DCF8C6;
+    color: rgb(0, 0, 0);
+    align-self: flex-end;     /* Выравниваем "me" вправо */
+}
+
+.sticker {
+
+            opacity: 0;             /* Скрываем круги в начале */
+            animation: pulse 2s linear infinite; /* Анимация */
+        }
+        @keyframes pulse {
+           0% {
+            transform: scale(0.8); /* Круги в начале анимации отсутствуют */
+            opacity: 90;
+            }
+            50% {
+                transform: scale(1); /* Круги увеличиваются */
+                opacity: 1;
+             }
+            100% {
+                transform: scale(0.8); /* Круги снова уменьшаются */
+                opacity: 90;
+            }
+        }
